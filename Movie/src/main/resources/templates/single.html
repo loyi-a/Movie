@@ -8,17 +8,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/style1.css" rel="stylesheet" type="text/css" media="all" />
     <!-- start plugins -->
     <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<h1>电影名称: <span th:text="${dy.DY_NAME}"></span></h1>
-<p>上映时间: <span th:text="${dy.DY_SY}"></span></p>
-<p>单价: <span th:text="${dy.DY_MONEY}"></span></p>
-<p>观影时间: <span th:text="${dy.DY_DATE}"></span></p>
-<p>座位库存: <span th:text="${dy.DY_WZ}"></span></p>
 <div class="container">
     <div class="container_wrap">
         <div class="header_top">
@@ -65,14 +60,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <div class="desc1 span_3_of_2">
-                        <p class="movie_option"><strong>Country: </strong><a href="#">established</a>, <a href="#">USA</a></p>
-                        <p class="movie_option"><strong>Year: </strong>2014</p>
-                        <p class="movie_option"><strong>Category: </strong><a href="#">Adventure</a>, <a href="#">Fantazy</a></p>
-                        <p class="movie_option"><strong>Release date: </strong>December 12, 2014</p>
-                        <p class="movie_option"><strong>Director: </strong><a href="#">suffered </a></p>
-                        <p class="movie_option"><strong>Actors: </strong><a href="#">anything</a>, <a href="#">Lorem Ipsum</a>, <a href="#"> discovered</a>, <a href="#"> Virginia</a>, <a href="#"> Virginia</a>, <a href="#">variations</a>, <a href="#">variations</a>, <a href="#">variations</a>, <a href="#"> Virginia</a> <a href="#">...</a></p>
-                        <p class="movie_option"><strong>Age restriction: </strong>13</p>
-                        <div class="down_btn"><a class="btn1" href="#"><span> </span>Download</a></div>
+                        <p class="movie_option"><strong>电影名称: </strong><span th:text="${dy.DY_NAME}"></span></p>
+                        <p class="movie_option"><strong>上映时间: </strong><span th:text="${dy.DY_SY}"></span></p>
+                        <p class="movie_option"><strong>单价:  </strong><span th:text="${dy.DY_MONEY}"></span></p>
+                        <p class="movie_option"><strong>观影时间:  </strong><span th:text="${dy.DY_DATE}"></span></p>
+                        <p class="movie_option"><strong>座位库存:: </strong> <span th:text="${dy.DY_WZ}"></span></p>
+                        <div class="down_btn"><a class="btn1" href="#"><span> </span>选座</a></div>
                     </div>
                     <div class="clearfix"> </div>
                     <p class="m_4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
