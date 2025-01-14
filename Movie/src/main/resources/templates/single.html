@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movie_store A Entertainment Category Flat Bootstarp Resposive Website Template | Single</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Movie_store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- start plugins -->
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<h1>电影名称: <span th:text="${dy.DY_NAME}"></span></h1>
+<p>上映时间: <span th:text="${dy.DY_SY}"></span></p>
+<p>单价: <span th:text="${dy.DY_MONEY}"></span></p>
+<p>观影时间: <span th:text="${dy.DY_DATE}"></span></p>
+<p>座位库存: <span th:text="${dy.DY_WZ}"></span></p>
+<div class="container">
+    <div class="container_wrap">
+        <div class="header_top">
+            <div class="col-sm-3 logo"><a href="index.html"><img src="/images/logo.png" alt=""/></a></div>
+            <div class="col-sm-3 header_right">
+                <ul class="header_right_box">
+                    <li><img src="/images/p1.png" alt=""/></li>
+                    <li><p><a href="login.html">Carol Varois</a></p></li>
+                    <li class="last"><i class="edit"> </i></li>
+                    <div class="clearfix"> </div>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="content">
+            <div class="movie_top">
+                <div class="col-md-9 movie_box">
+                    <div class="grid images_3_of_2">
+                        <div class="movie_image">
+                            <span class="movie_rating">5.0</span>
+                            <img src="/images/single.jpg" class="img-responsive" alt=""/>
+                        </div>
+                        <div class="movie_rate">
+                            <div class="rating_desc"><p>Your Vote :</p></div>
+                            <form action="" class="sky-form">
+                                <fieldset>
+                                    <section>
+                                        <div class="rating">
+                                            <input type="radio" name="stars-rating" id="stars-rating-5">
+                                            <label for="stars-rating-5"><i class="icon-star"></i></label>
+                                            <input type="radio" name="stars-rating" id="stars-rating-4">
+                                            <label for="stars-rating-4"><i class="icon-star"></i></label>
+                                            <input type="radio" name="stars-rating" id="stars-rating-3">
+                                            <label for="stars-rating-3"><i class="icon-star"></i></label>
+                                            <input type="radio" name="stars-rating" id="stars-rating-2">
+                                            <label for="stars-rating-2"><i class="icon-star"></i></label>
+                                            <input type="radio" name="stars-rating" id="stars-rating-1">
+                                            <label for="stars-rating-1"><i class="icon-star"></i></label>
+                                        </div>
+                                    </section>
+                                </fieldset>
+                            </form>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="desc1 span_3_of_2">
+                        <p class="movie_option"><strong>Country: </strong><a href="#">established</a>, <a href="#">USA</a></p>
+                        <p class="movie_option"><strong>Year: </strong>2014</p>
+                        <p class="movie_option"><strong>Category: </strong><a href="#">Adventure</a>, <a href="#">Fantazy</a></p>
+                        <p class="movie_option"><strong>Release date: </strong>December 12, 2014</p>
+                        <p class="movie_option"><strong>Director: </strong><a href="#">suffered </a></p>
+                        <p class="movie_option"><strong>Actors: </strong><a href="#">anything</a>, <a href="#">Lorem Ipsum</a>, <a href="#"> discovered</a>, <a href="#"> Virginia</a>, <a href="#"> Virginia</a>, <a href="#">variations</a>, <a href="#">variations</a>, <a href="#">variations</a>, <a href="#"> Virginia</a> <a href="#">...</a></p>
+                        <p class="movie_option"><strong>Age restriction: </strong>13</p>
+                        <div class="down_btn"><a class="btn1" href="#"><span> </span>Download</a></div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <p class="m_4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                    <form method="post" action="contact-post.html">
+                        <div class="to">
+                            <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                            <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:3%">
+                        </div>
+                        <div class="text">
+                            <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+                        </div>
+                        <div class="form-submit1">
+                            <input name="submit" type="submit" id="submit" value="Submit Your Message"><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <footer id="footer">
+        <div id="footer-3d">
+            <div class="gp-container">
+                <span class="first-widget-bend"> </span>
+            </div>
+        </div>
+        <div id="footer-widgets" class="gp-footer-larger-first-col">
+            <div class="gp-container">
+                <div class="footer-widget footer-1">
+                    <div class="wpb_wrapper">
+                        <img src="/images/f_logo.png" alt=""/>
+                    </div>
+                    <br>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                    <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                </div>
+                <div class="footer_box">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <h3>Categories</h3>
+                        <ul class="first">
+                            <li><a href="#">Dance</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Specials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <h3>Information</h3>
+                        <ul class="first">
+                            <li><a href="#">New products</a></li>
+                            <li><a href="#">top sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <h3>Follow Us</h3>
+                        <ul class="first">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                        <div class="copy">
+                            <p>&copy; 2015 <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

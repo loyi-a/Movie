@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理之订单表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,admin templates, admin template, admin dashboard, free tailwind templates, tailwind example">
+    <!-- Css -->
+    <link rel="stylesheet" th:href="@{/dist/styles.css}">
+    <link rel="stylesheet" th:href="@{/dist/all.css}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body>
+<div class="mx-auto bg-grey-400">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-nav">
+            <div class="flex justify-between">
+                <div class="p-1 mx-3 inline-flex items-center">
+                    <i class="fas fa-bars pr-2 text-white" onclick="sidebarToggle()"></i>
+                    <h1 class="text-white p-2">刷新</h1>
+                </div>
+                <div class="p-1 flex flex-row items-center">
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-1">
+            <aside id="sidebar" class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
+                <ul class="list-reset flex flex-col">
+                    <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
+                        <a href="/adminCtrl/queryAllLog"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-tachometer-alt float-left mx-2"></i>
+                            日志数据表
+                            <span><i class="fas fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li th:if="${level >= 1}" class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="/adminCtrl/queryAllUser"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fab fa-wpforms float-left mx-2"></i>
+                            用户数据表
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li th:if="${level >= 2}" class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="/dyCtrl/queryAllDy"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-grip-horizontal float-left mx-2"></i>
+                            电影数据表
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li th:if="${level >= 3}" class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="/adminCtrl/queryAllVIP"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-grip-horizontal float-left mx-2"></i>
+                            VIP数据表
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li th:if="${level >= 4}" class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="/orderCtrl/queryAllOrder"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-grip-horizontal float-left mx-2"></i>
+                            订单数据表
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <main class="bg-white-300 flex-1 p-3 overflow-hidden">
+                <div class="flex flex-col">
+                    <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2">
+                        <div class="rounded overflow-hidden shadow bg-white mx-2 w-full">
+                            <div class="px-6 py-2 border-b border-light-grey">
+                                <div class="font-bold text-xl">订单数据表</div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table text-grey-darkest">
+                                    <tr>
+                                        <th>订单编号</th>
+                                        <th>订单电影账号</th>
+                                        <th>订单用户编号</th>
+                                    </tr>
+                                    <tr th:each="order:${orderList}">
+                                        <td th:text="${order.getORDER_ID()}"></td>
+                                        <td th:text="${order.getORDER_DY_ID()}"></td>
+                                        <td th:text="${order.getORDER_USER_ID()}"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+</body>
+</html>

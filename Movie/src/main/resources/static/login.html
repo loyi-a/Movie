@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>登陆页面</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="Triple Forms Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+        <script>
+            addEventListener("load", function () {
+                setTimeout(hideURLbar, 0);
+            }, false);
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+        </script>
+        <!-- CSS文件 -->
+        <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+        <!-- Style-CSS -->
+        <link href="/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Font-Awesome-Icons-CSS -->
+        <!-- //CSS文件 -->
+        <!-- Web字体 -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext"
+              rel="stylesheet">
+        <!-- //Web字体 -->
+    </head>
+    <body>
+        <div class="main-bg">
+            <!-- //标题 -->
+            <div class="sub-main-w3">
+                <!-- 垂直标签页 -->
+                <div class="vertical-tab">
+                    <div id="section1" class="section-w3ls">
+                        <input type="radio" name="sections" id="option1" checked>
+                        <label for="option1" class="icon-left-w3pvt"><span class="fa fa-user-circle" aria-hidden="true"></span>登录</label>
+                        <article>
+                            <h3 class="legend">登录</h3>
+                            <div class="input">
+                                <span class="fa fa-user-o" aria-hidden="true"></span>
+                                <input type="text" placeholder="账号" name="userName" id="userName" required />
+                            </div>
+                            <div class="input">
+                                <span class="fa fa-key" aria-hidden="true"></span>
+                                <input type="password" placeholder="密码" name="userPass" id="userPass" required />
+                            </div>
+                            <button type="button" id="userLogin" class="btn submit">登录</button>
+                        </article>
+                    </div>
+                    <div id="section2" class="section-w3ls">
+                        <input type="radio" name="sections" id="option2">
+                        <label for="option2" class="icon-left-w3pvt"><span class="fa fa-pencil-square" aria-hidden="true"></span>注册</label>
+                        <article>
+                            <h3 class="legend">注册</h3>
+                            <div class="input">
+                                <span class="fa fa-user-o" aria-hidden="true"></span>
+                                <input type="text" placeholder="账号" name="userName2" id="userName2" autocomplete="off"/>
+                            </div>
+                            <div class="input">
+                                <span class="fa fa-key" aria-hidden="true"></span>
+                                <input type="password" placeholder="密码" name="userPass2" id="userPass2" autocomplete="off"/>
+                            </div>
+                            <div class="input">
+                                <span class="fa fa-key" aria-hidden="true"></span>
+                                <input type="password" placeholder="手机号" name="userPhone" id="userPhone" autocomplete="off"/>
+                            </div>
+                            <input type="button" id="userRegister" class="btn submit" value="注册">
+                        </article>
+                    </div>
+                </div>
+                <!-- //垂直标签页 -->
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- js文件 -->
+        <script type="text/javascript" src="/js/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="/js/login.js"></script>
+        <script type="text/javascript" src="/js/register.js"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.seiryo.movie.dao.AdminMapper">
+
+    <!--查询全部管理员-->
+    <select id="queryAllAdmin" resultType="org.seiryo.movie.pojo.ADMIN_INFO">
+        SELECT ADMIN_ID,ADMIN_NAME,ADMIN_PASS,ADMIN_QX,ADMIN_S FROM ADMIN_INFO
+        <where>
+            <if test="ADMIN_ID != null">
+                AND ADMIN_ID =#{ADMIN_ID}
+            </if>
+            <if test="ADMIN_NAME != null">
+                AND ADMIN_NAME =#{ADMIN_NAME}
+            </if>
+            <if test="ADMIN_PASS != null">
+                AND ADMIN_PASS =#{ADMIN_PASS}
+            </if>
+            <if test="ADMIN_QX != null">
+                AND ADMIN_QX =#{ADMIN_QX}
+            </if>
+            <if test="ADMIN_S != null">
+                AND ADMIN_S =#{ADMIN_S}
+            </if>
+        </where>
+    </select>
+
+    <!--查询全部日志-->
+    <select id="queryAllLog" resultType="org.seiryo.movie.pojo.LOG_INFO">
+        SELECT LOG_ID,LOG_INFO,LOG_DATE,LOG_NAME FROM LOG_INFO
+        <where>
+            <if test="LOG_ID != null">
+                AND LOG_ID =#{LOG_ID}
+            </if>
+            <if test="LOG_INFO != null">
+                AND LOG_INFO =#{LOG_INFO}
+            </if>
+            <if test="LOG_DATE != null">
+                AND LOG_DATE =#{LOG_DATE}
+            </if>
+            <if test="LOG_NAME != null">
+                AND LOG_NAME =#{LOG_NAME}
+            </if>
+        </where>
+    </select>
+
+</mapper>

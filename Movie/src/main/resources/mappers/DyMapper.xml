@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.seiryo.movie.dao.DyMapper">
+
+    <!-- 查询所有电影 -->
+    <select id="queryAllDy" resultType="org.seiryo.movie.pojo.DY_INFO">
+        SELECT DY_ID,DY_NAME,DY_SY,DY_MONEY,DY_DATE,DY_S,DY_WZ FROM DY_INFO
+    </select>
+
+    <!-- 根据电影名称获取电影详情 -->
+    <select id="getDyByName" parameterType="org.seiryo.movie.pojo.DY_INFO" resultType="org.seiryo.movie.pojo.DY_INFO">
+        SELECT DY_ID, DY_NAME, DY_SY, DY_MONEY, DY_DATE, DY_S, DY_WZ
+        FROM DY_INFO
+        WHERE DY_NAME = #{DY_NAME}
+    </select>
+
+
+</mapper>
